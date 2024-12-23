@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="santa Ana e noesa copiar.png" type="image/x-icon"> 
+    <title>Santa library</title>
+    <link rel="stylesheet" href="galeria.css">
+  
+</head>
+<body>
+    <nav class="nav">
+        <div class="active">
+        <div class="container">
+            <h2 class="logo">
+                <img src="santa Ana e noesa copiar.png" alt="20px" width="10%" class="png">
+               
+            </h2>
+            <div class="search-bar">
+                <i class="uil uil-search"></i>
+                <input type="search" placeholder="Pesquisar" style="align-items: center; text-align: center;">
+            </div>
+            <div class="create">
+               
+            </div>
+            <button class="responsive"></button>
+            
+        </div>
+        <div class="menu">
+            <ul>
+                
+                <li><a href="index.html"  class="menu-item">Início</a></li>
+                <li><a href="destaque.html" class="menu-item">Destaque</a></li>
+                <li><a href="noticias.html"class="menu-item">Notícias</a></li>
+                <li><a href="video.html"class="menu-item">Videos</a></li>
+                <li><a href="entivista.html"class="menu-item">Entrivistas</a></li>
+                <li><a href="galeria.html"class="a1"class="menu-item">Galeria E Projectos</a></li>
+                <li><a href="curiosidades.html"class="menu-item">Curiosidades</a></li>
+                <li><a href="contactos.html"class="menu-item">Contactos</a></li>
+                <li><a href="sobre.html"class="menu-item">Sobre</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1></h1>
+        <p></p>
+    </header>
+
+    <section class="section">
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <div class="gallery-item" data-image="https://via.placeholder.com/800x600">
+                <img src="01.jpg" alt="Imagem 1">
+            </div>
+            <div class="gallery-item" data-image="https://via.placeholder.com/800x600">
+                <img src="2.jpg" alt="Imagem 2">
+            </div>
+            <div class="gallery-item" data-image="https://via.placeholder.com/800x600">
+                <img src="3.jpg" alt="Imagem 3">
+            </div>
+            <div class="gallery-item" data-image="https://via.placeholder.com/800x600">
+                <img src="3 (2).jpg" alt="Imagem 4">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Projetos</h2>
+        <div class="project">
+            <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+            <div class="project-content">
+                <h3>Projeto 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+            <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+            <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+            <div class="project-content">
+                <h3>Projeto 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img src="" alt="Imagem Ampliada">
+    </div>
+
+    <script>
+        // Lightbox JS
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const closeLightbox = lightbox.querySelector('.close');
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-image');
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

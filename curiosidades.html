@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="santa Ana e noesa copiar.png" type="image/x-icon"> 
+    <title>Santa library</title>
+    <link rel="stylesheet" href="curiosidades.css">
+  
+</head>
+<body>
+    <nav class="nav">
+        <div class="active">
+        <div class="container">
+            <h2 class="logo">
+                <img src="santa Ana e noesa copiar.png" alt="20px" width="10%" class="png">
+               
+            </h2>
+            <div class="search-bar">
+                <i class="uil uil-search"></i>
+                <input type="search" placeholder="Pesquisar" style="align-items: center; text-align: center;">
+            </div>
+            <div class="create">
+               
+            </div>
+                <button class="responsive"></button>
+        </div>
+        <div class="menu">
+            <ul>
+                
+                <li><a href="index.html"  class="menu-item">Início</a></li>
+                <li><a href="destaque.html" class="menu-item">Destaque</a></li>
+                <li><a href="noticias.html"class="menu-item">Notícias</a></li>
+                <li><a href="video.html"class="menu-item">Videos</a></li>
+                <li><a href="entivista.html"class="menu-item">Entrivistas</a></li>
+                <li><a href="galeria.html"class="menu-item">Galeria E Projectos</a></li>
+                <li><a href="curiosidades.html"class="a1"class="menu-item">Curiosidades</a></li>
+                <li><a href="contactos.html"class="menu-item">Contactos</a></li>
+                <li><a href="sobre.html"class="menu-item">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <header>
+        <h1></h1>
+        <p></p>
+    </header>
+    <main class="main1">
+        <section>
+            <h2 class="h2">Sabia que...</h2>
+            <ul class="ul">
+                <li>
+                    <p>O giz foi inventado em 1814 e ainda é usado em muitas escolas ao redor do mundo!</p>
+                </li>
+                <li>
+                    <p>A primeira escola pública do Brasil foi fundada em 1549, em Salvador.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="h2">Curiosidades do Mundo</h2>
+            <ul class="ul">
+                <li>
+                    <p>A maior sala de aula do mundo fica na Índia e pode acomodar até 12 mil estudantes de uma só vez.</p>
+                </li>
+                <li>
+                    <p>Na Finlândia, não existem provas anuais obrigatórias para os alunos.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="h2">Fatos Científicos</h2>
+            <ul class="ul">
+                <li>
+                    <p>O cérebro humano consome aproximadamente 20% de toda a energia do corpo.</p>
+                </li>
+                <li>
+                    <p>A luz do Sol leva cerca de 8 minutos para chegar à Terra.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <button id="backToTop" title="Voltar ao topo">⬆</button>
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
